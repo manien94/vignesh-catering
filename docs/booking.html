@@ -4,46 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book Now | Vignesh Catering</title>
-  <script>
-    async function loadHTML(id, file) {
-      const res = await fetch(file);
-      const text = await res.text();
-      document.getElementById(id).innerHTML = text;
-    }
-
-    loadHTML("header", "header.html");
-    loadHTML("footer", "footer.html");
-  </script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Handle form submission via JavaScript
-    function handleSubmit(event) {
-      event.preventDefault();
-      const form = event.target;
-      const formData = new FormData(form);
-
-      fetch(form.action, {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => {
-        if (response.ok) {
-          alert('Thanks! We received your booking.');
-          form.reset();
-        } else {
-          alert('Something went wrong. Please try again.');
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('Something went wrong. Please try again.');
-      });
-    }
-  </script>
 </head>
 <body class="min-h-screen flex flex-col bg-neutral-100">
 
   <!-- Include Header Here -->
+  <div id="header"></div>
 
   <main class="py-16">
     <div class="container mx-auto px-4 text-center">
@@ -85,6 +51,44 @@
       </form>
     </div>
   </main>
+
+  <!-- Include Footer Here -->
+  <div id="footer"></div>
+
+  <!-- Load Header/Footer Scripts AFTER elements exist -->
+  <script>
+    async function loadHTML(id, file) {
+      const res = await fetch(file);
+      const text = await res.text();
+      document.getElementById(id).innerHTML = text;
+    }
+
+    loadHTML("header", "header.html");
+    loadHTML("footer", "footer.html");
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          alert('Thanks! We received your booking.');
+          form.reset();
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Something went wrong. Please try again.');
+      });
+    }
+  </script>
 
 </body>
 </html>
