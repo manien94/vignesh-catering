@@ -5,16 +5,23 @@ on:
     branches: [main]
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      - name: Replace webhook placeholder
+      - name: Inject Webhook URL into HTML
         run: |
           sed -i "s|{{WEBHOOK_URL}}|${{ secrets.MAKE_WEBHOOK_URL }}|g" docs/booking.html
 
@@ -24,7 +31,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: .  # Or your site's build directory if using a framework
+          path: .
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
