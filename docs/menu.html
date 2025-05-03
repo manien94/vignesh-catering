@@ -1,75 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Menu | Vignesh Catering</title>
-      <script src="https://cdn.tailwindcss.com"></script>
-      <link rel="stylesheet" href="style/menu-style.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-      <link rel="shortcut icon" type="image/png" href="assets/vc-favicon.png">
-  </head>
-  <body class="min-h-screen flex flex-col">
-      <div id="header"></div>
-      <!-- Hero Section -->
-      <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-         <!-- Background Image Layer -->
-         <div class="absolute inset-0 z-0">
-            <img src="assets/menu-bg.jpg" alt="Food" class="w-full h-full object-cover opacity-40 brightness-50" />
-            <div class="absolute inset-0 bg-gradient-to-b from-[#8B0000]/50 to-neutral-900/90"></div>
-         </div>
-         <!-- Foreground Content (Swiper) -->
-         <div class="relative z-10 w-full h-[70vh] max-w-5xl mx-auto px-4 flex items-center justify-center">
-            <div class="swiper w-full h-full">
-               <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="assets/menu page 1.jpg" /></div>
-                  <div class="swiper-slide"><img src="assets/menu page 2.jpg" /></div>
-                  <div class="swiper-slide"><img src="assets/menu page 3.jpg" /></div>
-                  <div class="swiper-slide"><img src="assets/menu page 4.jpg" /></div>
-                  <div class="swiper-slide"><img src="assets/menu page 5.jpg" /></div>
-                  <div class="swiper-slide"><img src="assets/menu page 6.jpg" /></div>
-                  <div class="swiper-slide"><img src="assets/menu page 7.jpg" /></div>
-                  <div class="swiper-slide"><img src="assets/menu page 8.jpg" /></div>
-               </div>
-               <div class="swiper-pagination"></div>
-               <div class="swiper-button-prev"></div>
-               <div class="swiper-button-next"></div>
-            </div>
-         </div>
-      </section>
-      <div id="footer"></div>
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <script>  
-         const swiper = new Swiper('.swiper', {
-             autoplay: {
-               delay: 3000,
-               disableOnInteraction: false,
-             },
-           
-           loop: true,
-         
-           pagination: {
-             el: '.swiper-pagination',
-             clickable: true,
-           },
-         
-           navigation: {
-             nextEl: '.swiper-button-next',
-             prevEl: '.swiper-button-prev',
-           },
-         
-         });
-      </script>
-      <script>
-         async function loadHTML(id, file) {
-           const res = await fetch(file);
-           const text = await res.text();
-           document.getElementById(id).innerHTML = text;
-         }
-         
-         loadHTML("header", "header.html");
-         loadHTML("footer", "footer.html");
-         
-      </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu | Vignesh Catering</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style/menu-style.css" />
+  
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <div id="header"></div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img src="assets/menu-bg.jpg" alt="Food Background" class="w-full h-full object-cover opacity-40 brightness-50" />
+      <div class="absolute inset-0 bg-gradient-to-b from-[#8B0000]/50 to-neutral-900/90"></div>
+    </div>
+
+    <!-- Foreground: Swiper -->
+    <div class="relative z-10 w-full max-w-5xl mx-auto px-4 py-8">
+      <div class="swiper w-full h-full">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/menu page 1.jpg" alt="Menu Page 1" /></div>
+          <div class="swiper-slide"><img src="assets/menu page 2.jpg" alt="Menu Page 2" /></div>
+          <div class="swiper-slide"><img src="assets/menu page 3.jpg" alt="Menu Page 3" /></div>
+          <div class="swiper-slide"><img src="assets/menu page 4.jpg" alt="Menu Page 4" /></div>
+          <div class="swiper-slide"><img src="assets/menu page 5.jpg" alt="Menu Page 5" /></div>
+          <div class="swiper-slide"><img src="assets/menu page 6.jpg" alt="Menu Page 6" /></div>
+          <div class="swiper-slide"><img src="assets/menu page 7.jpg" alt="Menu Page 7" /></div>
+          <div class="swiper-slide"><img src="assets/menu page 8.jpg" alt="Menu Page 8" /></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Swiper Init -->
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+  <!-- Dynamic Header/Footer Loader -->
+  <script>
+    async function loadHTML(id, file) {
+      const res = await fetch(file);
+      const text = await res.text();
+      document.getElementById(id).innerHTML = text;
+    }
+
+    loadHTML("header", "header.html");
+    loadHTML("footer", "footer.html");
+  </script>
+
+</body>
 </html>
