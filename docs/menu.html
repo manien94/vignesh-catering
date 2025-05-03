@@ -4,34 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menu | Vignesh Catering</title>
-  <link rel="stylesheet" href="style/style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style/menu-style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
-<body class="min-h-screen flex flex-col">
-    <div class="slider-container">
-      <div class="slider" id="slider">
-        <img src="assets/menu page 1.jpg" class="slide" alt="Menu Page 1">
-        <img src="assets/menu page 2.jpg" class="slide" alt="Menu Page 2">
-        <img src="assets/menu page 3.jpg" class="slide" alt="Menu Page 3">
-        <img src="assets/menu page 4.jpg" class="slide" alt="Menu Page 4">
-        <img src="assets/menu page 5.jpg" class="slide" alt="Menu Page 5">
-        <img src="assets/menu page 6.jpg" class="slide" alt="Menu Page 6">
-        <img src="assets/menu page 7.jpg" class="slide" alt="Menu Page 7">
-        <img src="assets/menu page 8.jpg" class="slide" alt="Menu Page 8">
+<body>
+
+  <div id="header"></div>
+
+  <main class="py-16 md:py-24 bg-neutral-100">
+  
+    <div class="container">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="assets/menu page 1.jpg"></div>
+          <div class="swiper-slide"><img src="assets/menu page 2.jpg"></div>
+          <div class="swiper-slide"><img src="assets/menu page 3.jpg"></div>
+          <div class="swiper-slide"><img src="assets/menu page 4.jpg"></div>
+          <div class="swiper-slide"><img src="assets/menu page 5.jpg"></div>
+          <div class="swiper-slide"><img src="assets/menu page 6.jpg"></div>
+          <div class="swiper-slide"><img src="assets/menu page 7.jpg"></div>
+          <div class="swiper-slide"><img src="assets/menu page 8.jpg"></div>
+          
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
       </div>
 
-      <button class="nav prev" onclick="changeSlide(-1)">❮</button>
-      <button class="nav next" onclick="changeSlide(1)">❯</button>
-      <div class="dots" id="dots">
     </div>
 
-    <script src="scripts/slide-image.js"></script>
-    
-  </body>
+  </main>
 
   <div id="footer"></div>
 
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>  
+    const swiper = new Swiper('.swiper', {
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      
+      loop: true,
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    
+    });
+  </script>
+
+  <!-- Load Header/Footer Scripts AFTER elements exist -->
   <script>
     async function loadHTML(id, file) {
       const res = await fetch(file);
