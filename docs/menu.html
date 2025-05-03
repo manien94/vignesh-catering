@@ -4,72 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menu | Vignesh Catering</title>
-
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom Styles -->
+  <link rel="shortcut icon" type="image/png" href="assets/vc-favicon.png">
   <link rel="stylesheet" href="style/menu-style.css" />
-  
-  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body class="min-h-screen flex flex-col">
+
   <div id="header"></div>
 
-  <main id="main-content" class="flex-grow">
-    <section class="relative min-h-[calc(100vh-128px)] flex items-center justify-center overflow-hidden pt-16">
-      <!-- Background Image -->
-      <div class="absolute inset-0 z-0">
-        <img src="assets/menu-bg.jpg" alt="Food Background" class="w-full h-full object-cover opacity-40 brightness-50" />
-        <div class="absolute inset-0 bg-gradient-to-b from-[#8B0000]/50 to-neutral-900/90"></div>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="assets/menu-bg.jpg" alt="Food" class="w-full h-full object-cover opacity-40 brightness-50" />
+      <div class="absolute inset-0 bg-gradient-to-b from-[#8B0000]/50 to-neutral-900/90"></div>
+    </div>
+    <div class="container mx-auto px-4 z-10 text-center">
+      <h1 class="text-5xl font-bold text-white mb-4">Authentic South Indian Flavors For Sacred Moments</h1>
+      <p class="text-2xl text-white/90 mb-8">Tradition-rich catering and event management for life's most precious celebrations</p>
+      <div class="flex justify-center mb-8">
+        <div class="h-1 w-24 bg-[#D4AF37]"></div>
       </div>
-
-      <!-- Foreground: Swiper -->
-      <div class="relative z-10 w-full max-w-5xl mx-auto px-4 py-8">
-        <div class="swiper w-full h-full">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="assets/menu page 1.jpg" alt="Menu Page 1" /></div>
-            <div class="swiper-slide"><img src="assets/menu page 2.jpg" alt="Menu Page 2" /></div>
-            <div class="swiper-slide"><img src="assets/menu page 3.jpg" alt="Menu Page 3" /></div>
-            <div class="swiper-slide"><img src="assets/menu page 4.jpg" alt="Menu Page 4" /></div>
-            <div class="swiper-slide"><img src="assets/menu page 5.jpg" alt="Menu Page 5" /></div>
-            <div class="swiper-slide"><img src="assets/menu page 6.jpg" alt="Menu Page 6" /></div>
-            <div class="swiper-slide"><img src="assets/menu page 7.jpg" alt="Menu Page 7" /></div>
-            <div class="swiper-slide"><img src="assets/menu page 8.jpg" alt="Menu Page 8" /></div>
-          </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="booking.html" class="px-8 py-3 bg-[#D4AF37] text-neutral-900 font-medium rounded-lg hover:scale-105">Plan Your Event</a>
+        <a href="menu.html" class="px-8 py-3 border border-white text-white font-medium rounded-lg hover:scale-105">Explore Our Menu</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <div id="footer"></div>
 
-  <!-- Swiper Init -->
-  <script>
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  </script>
-
-  <!-- Dynamic Header/Footer Loader -->
   <script>
     async function loadHTML(id, file) {
       const res = await fetch(file);
@@ -79,8 +44,8 @@
 
     loadHTML("header", "header.html");
     loadHTML("footer", "footer.html");
+
   </script>
 
-  <div id="footer"></div>
 </body>
 </html>
