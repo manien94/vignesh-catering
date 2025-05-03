@@ -18,6 +18,14 @@ body {
     height: fit-content;
   }
   
-  .swiper-slide img{
+  .swiper-slide img {
     width: 100%;
+  }
+
+  .swiper .swiper-button-prev, .swiper .swiper-button-next {
+    color: #d31313;
+  }
+
+  .swiper .swiper-pagination-bullet-active {
+    background: #d31313;
   }
