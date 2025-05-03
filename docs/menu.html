@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menu | Vignesh Catering</title>
+  <link rel="stylesheet" href="style/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -11,33 +12,36 @@
   <div id="header"></div>
 
   <!-- Menu Section -->
-  <main class="py-16 md:py-24 bg-neutral-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center text-[#8B0000] mb-12">Our Menu</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-2xl font-semibold text-[#8B0000] mb-4">Main Courses</h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-2">
-            <li>Sambar</li>
-            <li>Rasam</li>
-            <li>Aviyal</li>
-            <li>Olan</li>
-            <li>Kootu Varieties</li>
-          </ul>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-2xl font-semibold text-[#8B0000] mb-4">Snacks & Payasam</h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-2">
-            <li>Medhu Vadai</li>
-            <li>Mysore Bonda</li>
-            <li>Pal Payasam</li>
-            <li>Ada Pradhaman</li>
-            <li>Traditional Mysore Pak</li>
-          </ul>
-        </div>
+  <body>
+    <div class="book">
+      <div class="page" onclick="flipPage(this)">
+        <img src="assets/menu page 1.jpg" alt="Menu Page 1">
+      </div>
+      <div class="page" onclick="flipPage(this)">
+        <img src="assets/menu page 2.jpg" alt="Menu Page 2">
+      </div>
+      <div class="page" onclick="flipPage(this)">
+        <img src="assets/menu page 3.jpg" alt="Menu Page 3">
+      </div>
+      <div class="page" onclick="flipPage(this)">
+        <img src="assets/menu page 4.jpg" alt="Menu Page 4">
+      </div>
+      <div class="page" onclick="flipPage(this)">
+        <img src="assets/menu page 5.jpg" alt="Menu Page 5">
+      </div>
+      <div class="page" onclick="flipPage(this)">
+        <img src="assets/menu page 6.jpg" alt="Menu Page 6">
+      </div>
+      <div class="page" onclick="flipPage(this)">
+        <img src="assets/menu page 7.jpg" alt="Menu Page 7">
+      </div>
+      <div class="page" onclick="flipPage(this)">
+        <img src="assets/menu page 8.jpg" alt="Menu Page 8">
       </div>
     </div>
-  </main>
+  
+    <script src="scripts/flip-page.js"></script>
+  </body>
 
   <div id="footer"></div>
 
