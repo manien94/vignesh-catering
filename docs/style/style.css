@@ -8,10 +8,11 @@ body {
   
   .book {
     position: relative;
-    width: 600px;
-    height: 800px;
+    width: 1300px; /* updated */
+    height: 827px; /* updated */
     perspective: 2000px;
   }
+  
   
   .page {
     width: 100%;
