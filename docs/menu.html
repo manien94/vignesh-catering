@@ -10,10 +10,9 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style/menu-style.css" />
-  
+
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
 </head>
 
 <body class="min-h-screen flex flex-col">
@@ -21,34 +20,36 @@
   <!-- Header -->
   <div id="header"></div>
 
-  <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-
-    <!-- Background Image -->
-    <div class="absolute inset-0 z-0">
-      <img src="assets/menu-bg.jpg" alt="Food Background" class="w-full h-full object-cover opacity-40 brightness-50" />
-      <div class="absolute inset-0 bg-gradient-to-b from-[#8B0000]/50 to-neutral-900/90"></div>
-    </div>
-
-    <!-- Foreground: Swiper -->
-    <div class="relative z-10 w-full max-w-5xl mx-auto px-4 py-8">
-      <div class="swiper w-full h-full">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="assets/menu page 1.jpg" alt="Menu Page 1" /></div>
-          <div class="swiper-slide"><img src="assets/menu page 2.jpg" alt="Menu Page 2" /></div>
-          <div class="swiper-slide"><img src="assets/menu page 3.jpg" alt="Menu Page 3" /></div>
-          <div class="swiper-slide"><img src="assets/menu page 4.jpg" alt="Menu Page 4" /></div>
-          <div class="swiper-slide"><img src="assets/menu page 5.jpg" alt="Menu Page 5" /></div>
-          <div class="swiper-slide"><img src="assets/menu page 6.jpg" alt="Menu Page 6" /></div>
-          <div class="swiper-slide"><img src="assets/menu page 7.jpg" alt="Menu Page 7" /></div>
-          <div class="swiper-slide"><img src="assets/menu page 8.jpg" alt="Menu Page 8" /></div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative min-h-[calc(100vh-128px)] flex items-center justify-center overflow-hidden pt-16">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="assets/menu-bg.jpg" alt="Food Background" class="w-full h-full object-cover opacity-40 brightness-50" />
+        <div class="absolute inset-0 bg-gradient-to-b from-[#8B0000]/50 to-neutral-900/90"></div>
       </div>
-    </div>
-  </section>
+
+      <!-- Foreground: Swiper -->
+      <div class="relative z-10 w-full max-w-5xl mx-auto px-4 py-8">
+        <div class="swiper w-full h-full">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/menu page 1.jpg" alt="Menu Page 1" /></div>
+            <div class="swiper-slide"><img src="assets/menu page 2.jpg" alt="Menu Page 2" /></div>
+            <div class="swiper-slide"><img src="assets/menu page 3.jpg" alt="Menu Page 3" /></div>
+            <div class="swiper-slide"><img src="assets/menu page 4.jpg" alt="Menu Page 4" /></div>
+            <div class="swiper-slide"><img src="assets/menu page 5.jpg" alt="Menu Page 5" /></div>
+            <div class="swiper-slide"><img src="assets/menu page 6.jpg" alt="Menu Page 6" /></div>
+            <div class="swiper-slide"><img src="assets/menu page 7.jpg" alt="Menu Page 7" /></div>
+            <div class="swiper-slide"><img src="assets/menu page 8.jpg" alt="Menu Page 8" /></div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <div id="footer"></div>
