@@ -4,16 +4,6 @@ body {
     box-sizing: border-box;
   }
   
-  .my-container {
-    width: 100%;
-    min-height: 100vh;
-    background: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  
   .swiper {
     width: 100%;
     height: auto; /* let it grow with image */
