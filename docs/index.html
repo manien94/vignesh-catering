@@ -13,7 +13,7 @@
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352" alt="Food" class="w-full h-full object-cover opacity-40 brightness-50" />
+      <img src="assets/index-bg.jpg" alt="Food" class="w-full h-full object-cover opacity-40 brightness-50" />
       <div class="absolute inset-0 bg-gradient-to-b from-[#8B0000]/50 to-neutral-900/90"></div>
     </div>
     <div class="container mx-auto px-4 z-10 text-center">
@@ -41,28 +41,6 @@
     loadHTML("header", "header.html");
     loadHTML("footer", "footer.html");
 
-    function handleSubmit(event) {
-      event.preventDefault();
-      const form = event.target;
-      const formData = new FormData(form);
-
-      fetch(form.action, {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => {
-        if (response.ok) {
-          alert('Thanks! We received your booking.');
-          form.reset();
-        } else {
-          alert('Something went wrong. Please try again.');
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('Something went wrong. Please try again.');
-      });
-    }
   </script>
 
 </body>
